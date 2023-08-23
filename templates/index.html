@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Summarizer</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="upload-area">
+                <label for="file-input" class="custom-file-upload">Choose File</label>
+                <input type="file" name="pdf" id="file-input">
+                <p class="file-info">Drag and drop a PDF file here, or click to choose a file.</p>
+            </div>
+            <input type="submit" value="Summarize">
+            <button type="button" id="reset-button">Reset</button>
+        </form>
+        <div class="loading" id="loading">Processing...</div> <!-- Add loading indicator -->
+        {% if summary %}
+        <h2>Summary:</h2>
+        <p class="summary">{{ summary }}</p>
+        {% endif %}
+    </div>    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

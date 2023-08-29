@@ -5,7 +5,7 @@ import google.generativeai as palm
 
 app = Flask(__name__)
 
-palm.configure(api_key="AIzaSyCTIl8o_TjFgwbfleiJxnN1BmY-uvyVj44")
+palm.configure(api_key="YOUR_API")
 
 defaults = {
     'model': 'models/text-bison-001',

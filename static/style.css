@@ -9,22 +9,29 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(153deg, rgba(41,41,50,1) 0%, rgba(23,23,25,1) 20%, rgba(47,47,66,1) 45%, rgba(33,87,102,1) 100%, rgba(0,212,255,1) 100%);
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: transparent;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 12px 1px rgba(255, 255, 255, 0.5),
+                0px 0px 0px 1px rgba(255, 255, 255, 0.541);
     text-align: center;
 }
 
 h1 {
     margin-top: 0;
     margin-bottom: 20px;
+    color: white;
+    font-family: monospace;
+}
+
+p{
+    color: white;
 }
 
 form {
@@ -32,29 +39,31 @@ form {
 }
 
 .upload-area {
-    border: 2px dashed #007bff;
+    border: 2px dashed white;
     padding: 20px;
     text-align: center;
     transition: border-color 0.3s ease-in-out;
 }
 
 .upload-area.drag-over {
-    border-color: #0056b3;
+    border-color: grey;
 }
 
 .custom-file-upload {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: transparent;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
+    box-shadow: 0px 0px 12px 1px rgba(255, 255, 255, 0.5),
+                0px 0px 0px 1px rgba(255, 255, 255, 0.541);
 }
 
 .custom-file-upload:hover {
-    background-color: #0056b3;
+    background-color: grey;
 }
 
 input[type="file"] {
@@ -62,7 +71,7 @@ input[type="file"] {
 }
 
 input[type="submit"] {
-    background-color: #007bff;
+    background-color: teal;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -73,11 +82,12 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: rgb(5, 99, 99);
 }
 
 h2 {
     margin-top: 20px;
+    color: white;
 }
 
 p {
@@ -85,7 +95,7 @@ p {
 }
 
 #reset-button {
-    background-color: #ff0000; /* Red color */
+    background-color: silver; /* Red color */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -95,16 +105,16 @@ p {
 }
 
 #reset-button:hover {
-    background-color: #cc0000; /* Darker red on hover */
+    background-color: rgb(121, 115, 115); /* Darker red on hover */
 }
 
 .upload-area.selected {
-    border-color: #28a745; /* Green color */
+    border-color: wheat;
 }
 
 .loading {
     display: none;
     margin-top: 10px;
     font-weight: bold;
-    color: #007bff;
+    color: wheat;
 }

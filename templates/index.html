@@ -3,6 +3,7 @@
 <head>
     <title>PDF Summarizer</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="pdf.png">
 </head>
 <body>
     <div class="container">
@@ -12,6 +13,11 @@
                 <label for="file-input" class="custom-file-upload">Choose File</label>
                 <input type="file" name="pdf" id="file-input">
                 <p class="file-info">Drag and drop a PDF file here, or click to choose a file.</p>
+            </div>
+            <div class="error-message">
+                {% if error_message %}
+                {{ error_message }}
+                {% endif %}
             </div>
             <input type="submit" value="Summarize">
             <button type="button" id="reset-button">Reset</button>
